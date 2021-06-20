@@ -9,7 +9,7 @@ MONTH=$(date +%m)
 # 当前日期
 DAY=$(date +%d)
 # 当前时间
-TIME=$(date +%k%M)
+TIME=$(date +%H%M)
 # 备份文件具体存储目录
 backupsDateDir=$backupsDir/$YEAR/$MONTH/$DAY
 # 创建备份文件具体存储目录
