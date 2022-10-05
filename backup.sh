@@ -36,7 +36,7 @@ fi
 # 输入重定向配置文件
 exec < $configFile
 # 读取一行配置文件
-read FileName
+read -r FileName
 # 遍历配置文件
 while [ $? -eq 0 ]
 do
@@ -47,14 +47,14 @@ do
     echo "行号为 ${FileNo} 的文件或目录没有找到！"
   fi
   FileNo=$((FileNo + 1))
-  read FileName
+  read -r FileName
 done
 
 echo
 echo "开始备份..."
 echo
 
-tar -czf $backupFile $FileList 2> /dev/null
+tar -czf $backupFile $FileList
 
 echo "备份完成！"
 echo "文件位置： ${backupFile}"
